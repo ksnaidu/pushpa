@@ -1,13 +1,13 @@
-# # Create an EC2 Instance
-# resource "aws_instance" "roboshop" {
-#   ami           = "ami-0055977a6e828a4f4" # Replace with a valid AMI ID for your region
-#   instance_type = "t3.micro"
-#   vpc_security_group_ids = [ aws_security_group.allow_all.id ]
+# Create an EC2 Instance
+resource "aws_instance" "roboshop" {
+  ami           = "ami-0055977a6e828a4f4" # Replace with a valid AMI ID for your region
+  instance_type = "t3.micro"
+  vpc_security_group_ids = [ aws_security_group.allow_all.id ]
 
-#   tags = {
-#     Name = "Hello-world"
-#   }
-# }
+  tags = {
+    Name = "Hello-world"
+  }
+}
 
 
 resource "aws_security_group" "allow_all" {
